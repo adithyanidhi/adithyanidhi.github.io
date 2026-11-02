@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Adithya Nidhi | Brand Strategy, Go-to-Market &amp; Campaign Analytics</title>
+<meta name="description" content="Adithya Nidhi is a brand and marketing professional in Malmö, Sweden, with an MSc in International Marketing and Brand Management from Lund University.">
+<meta property="og:title" content="Adithya Nidhi | Brand &amp; Go-to-Market Marketer">
+<meta property="og:description" content="Brand strategy, go-to-market and campaign analytics.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #F7F8FB;
+  --ink: #151A2D;
+  --muted: #565D75;
+  --accent: #2D3FE0;
+  --accent-ink: #FFFFFF;
+  --tint: #E6E9FB;
+  --line: #D9DCE8;
+  --display: "Bricolage Grotesque", "Helvetica Neue", Arial, sans-serif;
+  --body: "Newsreader", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0F1220;
+    --ink: #ECEEF8;
+    --muted: #A0A7C0;
+    --accent: #8E9BFF;
+    --accent-ink: #0F1220;
+    --tint: #1B2040;
+    --line: #2A3052;
+  }
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: 4.5rem; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--body);
+  font-size: 1.125rem;
+  line-height: 1.65;
+}
+a { color: var(--accent); text-underline-offset: 3px; }
+a:hover { text-decoration-thickness: 2px; }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 3px; border-radius: 2px; }
+.wrap { max-width: 1040px; margin: 0 auto; padding: 0 1.5rem; }
+
+/* header */
+.site-header {
+  position: sticky; top: 0; z-index: 10;
+  background: color-mix(in srgb, var(--bg) 88%, transparent);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--line);
+}
+.nav { display: flex; justify-content: space-between; align-items: center; min-height: 3.5rem; gap: 1rem; }
+.nav-name { font-family: var(--display); font-weight: 700; font-size: 1.05rem; color: var(--ink); text-decoration: none; }
+.nav-links { display: flex; gap: 1.25rem; flex-wrap: wrap; font-family: var(--display); font-weight: 500; font-size: 0.95rem; }
+.nav-links a { color: var(--muted); text-decoration: none; }
+.nav-links a:hover { color: var(--accent); }
+@media (max-width: 640px) { .nav-links { display: none; } }
+
+/* hero */
+.hero { display: grid; grid-template-columns: 1fr 260px; gap: 3rem; align-items: center; padding: 5rem 0 4.5rem; }
+.hero-role { font-family: var(--display); font-weight: 500; color: var(--accent); margin: 0 0 1rem; font-size: 1.05rem; }
+.hero h1 {
+  font-family: var(--display); font-weight: 700;
+  font-size: clamp(2.4rem, 6vw, 4.4rem);
+  line-height: 1.05; letter-spacing: -0.025em;
+  margin: 0 0 1.5rem; max-width: 15ch;
+}
+.hero-sub { max-width: 52ch; color: var(--muted); margin: 0 0 2rem; font-size: 1.2rem; }
+.actions { display: flex; flex-wrap: wrap; gap: 0.75rem; }
+.btn {
+  font-family: var(--display); font-weight: 700; font-size: 1rem;
+  padding: 0.75rem 1.4rem; border-radius: 999px; text-decoration: none;
+  border: 2px solid var(--accent);
+}
+.btn-primary { background: var(--accent); color: var(--accent-ink); }
+.btn-secondary { color: var(--accent); }
+.btn-primary:hover { filter: brightness(1.1); }
+.btn-secondary:hover { background: var(--tint); }
+.portrait {
+  width: 260px; height: 320px; border-radius: 130px 130px 16px 16px;
+  background: var(--tint); overflow: hidden; display: grid; place-items: center;
+}
+.portrait img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.portrait-fallback { font-family: var(--display); font-weight: 700; font-size: 4rem; color: var(--accent); }
+@media (max-width: 820px) {
+  .hero { grid-template-columns: 1fr; padding: 3rem 0; gap: 2rem; }
+  .portrait { order: -1; width: 180px; height: 220px; border-radius: 90px 90px 12px 12px; }
+}
+
+/* sections */
+.section { display: grid; grid-template-columns: 180px 1fr; gap: 2rem; padding: 3.5rem 0; border-top: 1px solid var(--line); }
+.section h2 { font-family: var(--display); font-weight: 700; font-size: 1.5rem; margin: 0; letter-spacing: -0.01em; }
+@media (max-width: 760px) { .section { grid-template-columns: 1fr; gap: 1.25rem; padding: 2.5rem 0; } }
+.prose { max-width: 62ch; }
+.prose p { margin: 0 0 1rem; }
+.prose p:last-child { margin-bottom: 0; }
+.muted { color: var(--muted); }
+
+/* projects */
+.project { padding: 0 0 1.75rem 1.25rem; margin-bottom: 1.75rem; border-left: 3px solid var(--tint); }
+.project:last-child { margin-bottom: 0; padding-bottom: 0; }
+.project h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; line-height: 1.3; margin: 0 0 0.35rem; }
+.project-meta { font-family: var(--display); font-size: 0.95rem; color: var(--muted); margin: 0 0 0.6rem; }
+.project p { margin: 0 0 0.5rem; max-width: 62ch; }
+.project a { font-family: var(--display); font-weight: 500; font-size: 0.95rem; }
+
+/* experience */
+.role { margin-bottom: 2.5rem; }
+.role:last-child { margin-bottom: 0; }
+.role-head { display: flex; justify-content: space-between; gap: 1rem; flex-wrap: wrap; align-items: baseline; }
+.role h3 { font-family: var(--display); font-weight: 700; font-size: 1.2rem; margin: 0; }
+.role-date { font-family: var(--display); font-size: 0.95rem; color: var(--muted); }
+.role-org { margin: 0.1rem 0 0.75rem; color: var(--muted); }
+.role ul { margin: 0; padding-left: 1.2rem; max-width: 66ch; }
+.role li { margin-bottom: 0.5rem; }
+.role li strong { font-weight: 500; color: var(--ink); }
+
+/* skills + education */
+.skill-group { margin-bottom: 1.25rem; max-width: 66ch; }
+.skill-group:last-child { margin-bottom: 0; }
+.skill-group h3 { font-family: var(--display); font-weight: 700; font-size: 1.05rem; margin: 0 0 0.15rem; }
+.skill-group p { margin: 0; color: var(--muted); }
+.edu-row { display: flex; justify-content: space-between; gap: 1rem; padding: 0.6rem 0; border-bottom: 1px solid var(--line); flex-wrap: wrap; }
+.edu-row:first-child { padding-top: 0; }
+.edu-row strong { font-weight: 500; }
+.edu-date { font-family: var(--display); font-size: 0.95rem; color: var(--muted); white-space: nowrap; }
+.lang { margin-top: 1.25rem; }
+
+/* contact */
+.contact-list { list-style: none; padding: 0; margin: 1.25rem 0 0; display: flex; flex-wrap: wrap; gap: 1.5rem; font-family: var(--display); font-weight: 500; }
+footer { border-top: 1px solid var(--line); padding: 1.5rem 0 2.5rem; color: var(--muted); font-size: 0.95rem; }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap nav">
+    <a class="nav-name" href="#top">Adithya Nidhi</a>
+    <nav class="nav-links" aria-label="Sections">
+      <a href="#work">Projects</a>
+      <a href="#experience">Experience</a>
+      <a href="#skills">Skills</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top" class="wrap">
+
+  <section class="hero" aria-label="Introduction">
+    <div>
+      <p class="hero-role">Brand strategy, go-to-market and campaign analytics</p>
+      <h1>I look for the why behind the numbers.</h1>
+      <p class="hero-sub">I use market research and data to shape go-to-market strategies that convert. Based in Malmö, with an MSc from Lund University and two years in corporate brand marketing.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="#work">See my projects</a>
+        <a class="btn btn-secondary" href="mailto:adithyanidhi2002@gmail.com">Email me</a>
+      </div>
+    </div>
+    <div class="portrait">
+      <!-- Add your photo to the repository as photo.jpg. If it is missing, your initials show instead. -->
+      <img src="photo.jpg" alt="Portrait of Adithya Nidhi" onerror="this.remove()">
+      <span class="portrait-fallback" aria-hidden="true">AN</span>
+    </div>
+  </section>
+
+  <section class="section" id="about">
+    <h2>About</h2>
+    <div class="prose">
+      <p>I’m a brand and marketing professional with a dual Master’s background. I’ve worked on both sides of a launch: reading campaign data to see what’s working, and coordinating the teams who deliver it.</p>
+      <p>I’m looking for roles in marketing, brand coordination, performance analytics, go-to-market or campaign management.</p>
+    </div>
+  </section>
+
+  <section class="section" id="work">
+    <h2>Projects</h2>
+    <div>
+      <article class="project">
+        <h3>The Human Behind the Image: Consumer Interpretations of AI-Generated Fashion Advertising and Brand-Consumer Relationships</h3>
+        <p class="project-meta">Lund University | Published June 2026</p>
+        <p>A qualitative consumer-research study using H&amp;M campaign data to understand how AI-generated advertising affects brand trust and marketing strategy execution.</p>
+        <a href="https://lup.lub.lu.se/student-papers/record/9242140" target="_blank" rel="noopener">Read the thesis</a>
+      </article>
+      <article class="project">
+        <h3>More than a place to shop: Making the Grocery Store a Meal Destination</h3>
+        <p class="project-meta">Lund University | Dec 2025 – Jan 2026</p>
+        <p>Co-developed a strategic technology pathway to turn traditional Swedish grocery retailers into technology-augmented “meal destinations”.</p>
+        <a href="https://portal.research.lu.se/en/publications/more-than-a-place-to-shop-making-the-grocery-store-a-meal-destina/" target="_blank" rel="noopener">Read the publication</a>
+      </article>
+      <article class="project">
+        <h3>Brand Strategy Consulting Project</h3>
+        <p class="project-meta">Heather Constructions | Mar 2025 – Jun 2025</p>
+        <p>Led a team of five delivering market research and brand strategy recommendations. I managed task allocation, coordinated the data analysis, oversaw report preparation and presented the findings to faculty and industry partners.</p>
+      </article>
+      <article class="project">
+        <h3>Leadership and Performance Measurements: Keys to Productive Strategy Implementation</h3>
+        <p class="project-meta">O.P. Jindal Global University | Sep 2024 – Dec 2024</p>
+        <p>Analyzed how leadership styles and performance measurement systems drive strategy implementation across 4 corporate case studies.</p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="experience">
+    <h2>Experience</h2>
+    <div>
+      <article class="role">
+        <div class="role-head">
+          <h3>Digital Marketing &amp; Web Designer</h3>
+          <span class="role-date">Aug 2026 – Present</span>
+        </div>
+        <p class="role-org">Freelance</p>
+        <ul>
+          <li><strong>Digital content and marketing.</strong> Designed and ran organic Instagram marketing and content for niche brands, building targeted content and brand engagement.</li>
+          <li><strong>Web development.</strong> Built, designed and launched 5+ custom websites and professional portfolios, improving site loading speeds by 15% and boosting client inquiry rates.</li>
+          <li><strong>Content strategy.</strong> Developed content marketing strategies, writing and producing high-converting multimedia assets across digital platforms.</li>
+          <li><strong>Client delivery.</strong> Managed end-to-end project lifecycles (scoping, requirements, timelines) across multiple concurrent clients, with 100% on-time delivery and a 95% client satisfaction rate.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Assistant Brand Manager</h3>
+          <span class="role-date">Jul 2023 – Aug 2025</span>
+        </div>
+        <p class="role-org">Heather Constructions, Trivandrum, India</p>
+        <ul>
+          <li><strong>Campaigns.</strong> Analyzed customer trends and competitor pricing to launch targeted multichannel campaigns, driving a 20% increase in qualified inquiries and accelerating phase-one sales.</li>
+          <li><strong>B2C and B2B.</strong> Managed end-to-end B2C buyer journeys for 100+ residential units and directed high-value B2B partnerships with external agencies and vendors.</li>
+          <li><strong>Coordination.</strong> Coordinated updates across internal divisions for a $7.4 million portfolio, reducing project communication delays by 17%.</li>
+        </ul>
+      </article>
+
+      <article class="role">
+        <div class="role-head">
+          <h3>Management Intern/Trainee</h3>
+          <span class="role-date">Jan 2023 – Jul 2023</span>
+        </div>
+        <p class="role-org">Heather Constructions, Trivandrum, India</p>
+        <ul>
+          <li><strong>Competitor analysis.</strong> Ran SWOT and market gap analyses on 5 local competitors to identify emerging industry trends and support premium brand positioning.</li>
+          <li><strong>KPI reporting.</strong> Compiled and presented 4 monthly executive reports tracking asset utilization, campaign performance and marketing metrics across 2 major development projects.</li>
+          <li><strong>Project support.</strong> Coordinated inputs from 6 internal departments to deliver a government tender report for a public project valued up to $10 million.</li>
+        </ul>
+      </article>
+    </div>
+  </section>
+
+  <section class="section" id="skills">
+    <h2>Skills</h2>
+    <div>
+      <div class="skill-group">
+        <h3>Marketing strategy and GTM</h3>
+        <p>Go-to-market strategy, brand positioning, brand management, market research, consumer behaviour analysis, competitor analysis</p>
+      </div>
+      <div class="skill-group">
+        <h3>Campaign and growth marketing</h3>
+        <p>Campaign management, inbound marketing, digital and multichannel marketing, content strategy, social media content, web design, B2B and B2C marketing</p>
+      </div>
+      <div class="skill-group">
+        <h3>Data analytics and tools</h3>
+        <p>Advanced Excel, Google Analytics, HubSpot CRM, data analysis, trend analysis, KPI reporting, PowerPoint, Microsoft Office, Canva</p>
+      </div>
+      <div class="skill-group">
+        <h3>Leadership and execution</h3>
+        <p>Project management, cross-functional coordination, stakeholder management, vendor and agency management</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="education">
+    <h2>Education</h2>
+    <div>
+      <div class="edu-row"><span><strong>MSc in International Marketing and Brand Management</strong>, Lund University, Sweden</span><span class="edu-date">2025 – 2026</span></div>
+      <div class="edu-row"><span><strong>Master of Business Administration (MBA)</strong>, O.P. Jindal Global University, India (Online)</span><span class="edu-date">2024 – 2025</span></div>
+      <div class="edu-row"><span><strong>Diploma in Operations Management</strong>, Acharya Nagarjuna University, India (Online)</span><span class="edu-date">2023 – 2024</span></div>
+      <div class="edu-row"><span><strong>Bachelor’s in Botany</strong>, University of Kerala, India</span><span class="edu-date">2021 – 2023</span></div>
+      <p class="lang muted">Languages: English (professional fluency), Malayalam (native), Hindi (native), Swedish (basic)</p>
+    </div>
+  </section>
+
+  <section class="section" id="contact">
+    <h2>Contact</h2>
+    <div class="prose">
+      <p>I’m open to marketing, brand, analytics and go-to-market roles. The quickest way to reach me is email.</p>
+      <ul class="contact-list">
+        <li><a href="mailto:adithyanidhi2002@gmail.com">adithyanidhi2002@gmail.com</a></li>
+        <li><a href="https://linkedin.com/in/adithyanidhi02" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><span class="muted">Malmö, Sweden</span></li>
+      </ul>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">© 2026 Adithya Nidhi</div>
+</footer>
+
+</body>
+</html>
